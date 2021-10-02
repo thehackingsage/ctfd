@@ -16,6 +16,11 @@ fi
 #Perform updates and upgrades (upgrade isn't that important).
 apt-get -y update;
 #apt-get -y upgrade;
+read -p "Would you like to upgrade your system? (y/n): " upgradechoice
+if [[ $upgradechoice = 'y' ]]
+ then 
+   apt-get -y upgrade;
+ 
 
 #Setup CTFd home.
 mkdir /home/CTFd;
